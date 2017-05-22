@@ -24,17 +24,20 @@
       border-right: none;
     }
   }
+  #dropdown1 {
+    left: 3px;
+  }
   #dropdown2 {
-    left: -200px;
+    left: -166px;
   }
   #dropdown3 {
-    left: -220px;
+    left: -310px;
   }
   #dropdown4 {
-    left: -520px;
+    left: -440px;
   }
   #dropdown5 {
-    left: -560px;
+    left: -588px;
   }
   .selects-container {;
     padding-left: 10px;
@@ -45,9 +48,23 @@
     width: 150px;
   }
 }
-
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  .main-nav__item {
+    font-size: 14px;
+  }
+  .main-nav__item-expanded-container {
+    width: 750px;
+    padding: 15px;
+  }
+}
+@media (max-width: 767px) {
   .global-header__secondline {
     min-height: 1px;
+  }
+  .main-nav__item-expanded-container {
+    display: none;
+  }
+  .main-nav__item:hover:before {
+    display: none;
   }
 }

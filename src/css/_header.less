@@ -321,3 +321,89 @@
 .main-nav__item-expanded-link:hover {
   text-decoration: none;
 }
+
+//Mobile menu
+.main-nav-mob {
+  min-height: 1px;
+  border: 0;
+  background: transparent;
+  margin-bottom: 0;
+  & > .container {
+    min-height: 1px;
+    max-width: @main-width;
+    padding: 0;
+  }
+}
+
+.main-nav-mob__navbar-header {
+  min-height: 1px;
+  width: 100%;
+  position: relative;
+}
+
+#main-nav {
+  min-height: 1px;
+  padding: 0;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left:15px;
+}
+.main-nav-mob__nav {
+  width: 233px;
+  margin: 0;
+}
+.main-nav-mob__item {
+  line-height: 26px;
+  text-align: left;
+  font-size: 16px;
+  font-family: "Panton";
+  padding: 5px 10px 5px 15px;
+  & > .main-nav-mob__link {
+    padding: 0;
+    line-height: inherit;
+  }
+}
+
+.main-nav-mob__nav .main-nav-mob__item {
+  color: #000000;
+  & > .main-nav-mob__link {
+    color: inherit;
+  }
+}
+
+.link-white {
+  background: #ffffff;
+  position: relative;
+  & > a {
+    & > .tab-link {
+    font-size: 24px;
+    margin-top: -12px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+  }
+  }
+}
+.link-yellow {
+  background: @main-yellow;
+  position: relative;
+}
+.link-white:first-child,
+.link-yellow:first-child {
+  padding-top: 15px;
+}
+
+.link-white:last-child,
+.link-yellow:last-child {
+  padding-bottom: 15px;
+}
+.tab-link_yellow-icon {
+  position: absolute;
+  left: 0px;
+  top: 0;
+}
+.tab-link_yellow-text {
+  margin-left: 35px;
+  vertical-align: middle;
+}
