@@ -22,21 +22,21 @@
                     <div class="global-header__firstline">
                         <div class="container">
                             <div class="row">
-                                <div class="logo-box-container col-md-2 col-xs-6">
+                                <div class="logo-box-container col-md-2 col-sm-4 col-xs-6">
                                     <a href="index.html" target="_blank" class="logo-box">
                                         <span class="logo__img-box">
                                             <img src="images/logo.png" alt="logo" class="logo__img">
                                         </span>
                                     </a>
                                 </div>
-                                <div class="searchbtn-box hidden-lg hidden-md visible-sm-inline-block visible-xs-inline-block col-xs-2">
+                                <div class="searchbtn-box hidden-lg hidden-md hidden-sm visible-xs-inline-block col-xs-1">
                                     <button data-toggle="collapse" data-target="#search-expanded" aria-expanded="false"
                                             class="searchbtn navbar-toggle collapsed">
                                         <span class="sr-only">Toggle search field</span>
                                         <span class="fa fa-search"></span>
                                     </button>
                                 </div>
-                                <div class="nav-search-container col-md-10 visible-lg-block visible-md-block hidden-sm hidden-xs"
+                                <div class="nav-search-container col-md-10 col-sm-8 hidden-xs"
                                      id="search-expanded" class="navbar-collapse collapse" aria-expanded="false">
                                     <div class="search-input">
                                         <form name="search" method="get"
@@ -54,14 +54,14 @@
                                         </form>
                                     </div>
                                 </div>
-                                <div class="cart-box hidden-lg hidden-md visible-sm-inline-block visible-xs-inline-block col-xs-2">
+                                <div class="cart-box hidden-lg hidden-md hidden-sm visible-xs-inline-block col-xs-3">
                                     <div class="glyphicon glyphicon-shopping-cart" id="cart"></div>
                                     <div id="summ_cart">
                                         <span id="summ_currency">&pound;</span>
-                                        <span id="summ_number">0.00</span>
+                                        <span id="summ_number">99999.00</span>
                                     </div>
                                 </div>
-                                <div class="navbtn-box hidden-lg hidden-md visible-sm-inline-block visible-xs-inline-block col-xs-2">
+                                <div class="navbtn-box hidden-lg hidden-md hidden-sm visible-xs-inline-block col-xs-2">
                                     <button type="button" data-toggle="collapse" data-target="#main-nav"
                                             class="navbtn navbar-toggle collapsed">
                                         <span class="sr-only">Toggle navigation</span>
@@ -571,10 +571,10 @@
                     </div>
                 </header>
                 <!--FILTER-->
-                <!--Filter desktop-->
                 <section class="filter-container">
                     <div class="container">
                         <div class="row">
+                            <!--Filter desktop-->
                             <div class="filter-column col-md-12 hidden-sm hidden-xs">
                                 <div class="filter-container-row">
                                     <div class="reg-number-container">
@@ -592,40 +592,136 @@
                                            class="go-button__action">Go</a>
                                     </div>
                                     <div class="selects-container">
-                                        <select name="Select Vehicle" id value="Select Vehicle">
-                                            <option value="Select">Select Vehicle</option>
-                                            <option value="Audi">Audi</option>
-                                            <option value="BMW">BMW</option>
-                                            <option value="Volkswagen">Volkswagen</option>
-                                        </select>
-                                        <select name="Select Vehicle" id value="Select Vehicle">
-                                            <option value="Select">Select Brand</option>
-                                            <option value="Audi">Audi</option>
-                                            <option value="BMW">BMW</option>
-                                            <option value="Volkswagen">Volkswagen</option>
-                                        </select>
-                                        <select name="Select Vehicle" id value="Select Vehicle">
-                                            <option value="Select">Select Model</option>
-                                            <option value="Audi">Audi</option>
-                                            <option value="BMW">BMW</option>
-                                            <option value="Volkswagen">Volkswagen</option>
-                                        </select>
-                                        <select name="Select Vehicle" id value="Select Vehicle">
-                                            <option value="Select">Select Type</option>
-                                            <option value="Audi">Audi</option>
-                                            <option value="BMW">BMW</option>
-                                            <option value="Volkswagen">Volkswagen</option>
-                                        </select>
+                                        <form name="selections" id="selections" action>
+                                            <select name="Select Vehicle" id value="Select Vehicle">
+                                                <option value="Select">Select Vehicle</option>
+                                                <option value="Audi">Audi</option>
+                                                <option value="BMW">BMW</option>
+                                                <option value="Volkswagen">Volkswagen</option>
+                                            </select>
+                                            <select name="Select Vehicle" id value="Select Vehicle">
+                                                <option value="Select">Select Brand</option>
+                                                <option value="Audi">Audi</option>
+                                                <option value="BMW">BMW</option>
+                                                <option value="Volkswagen">Volkswagen</option>
+                                            </select>
+                                            <select name="Select Vehicle" id value="Select Vehicle">
+                                                <option value="Select">Select Model</option>
+                                                <option value="Audi">Audi</option>
+                                                <option value="BMW">BMW</option>
+                                                <option value="Volkswagen">Volkswagen</option>
+                                            </select>
+                                            <select name="Select Vehicle" id value="Select Vehicle">
+                                                <option value="Select">Select Type</option>
+                                                <option value="Audi">Audi</option>
+                                                <option value="BMW">BMW</option>
+                                                <option value="Volkswagen">Volkswagen</option>
+                                            </select>
+                                        </form>
                                     </div>
                                     <div class="go-button">
-                                        <a href="#" class="go-button__action">Find</a>
+                                        <a href="#" onclick="document.getElementById('selections').submit()"
+                                           class="go-button__action">Find</a>
                                     </div>
                                 </div>
                             </div>
+                            <!--End filter desktop-->
+                            <!--Start of Mobile Filter-->
+                            <div class="filter-mob-column col-xs-12 hidden-lg hidden-md visible-sm-block visible-xs-block">
+                                <div class="filter-mob-container-row">
+                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                        <div class="panel panel-default reg-panel">
+                                            <div class="panel-heading" role="tab" id="headingOne">
+                                                <h4 class="panel-title filter-heading1">
+                                                    <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                                       href="#collapseOne" aria-expanded="true"
+                                                       aria-controls="collapseOne">
+                                                        Enter your number plate below
+                                                        <span class="fa fa-angle-down arrow-down"></span>
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                                                 aria-labelledby="headingOne">
+                                                <div class="panel-body">
+                                                    <div class="reg-number-container__mob">
+                                                        <div class="reg-number__mob">
+                                                            <form name="regMob" id="regNumberMob" action>
+                                                                <input id="reg-input-mob" type="text"
+                                                                       placeholder="&nbsp; ENTER REG">
+                                                                <div class="reg-label__mob">
+                                                                    <img src="images/gb.png" alt="GB">
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                    </div>
+                                                    <div class="go-button__mob1">
+                                                        <a href="#"
+                                                           onclick="document.getElementById('regNumberMob').submit()"
+                                                           class="go-button__mob-action1">Go</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-default select-panel">
+                                            <div class="panel-heading" role="tab" id="headingTwo">
+                                                <h4 class="panel-title filter-heading2">
+                                                    <a class="collapsed" role="button" data-toggle="collapse"
+                                                       data-parent="#accordion" href="#collapseTwo"
+                                                       aria-expanded="false"
+                                                       aria-controls="collapseTwo">
+                                                        <span id="Or">Or</span>
+                                                        Select your vehicle
+                                                        <span class="fa fa-angle-down arrow-down"></span>
+                                                    </a>
+                                                </h4>
+                                            </div>
+                                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel"
+                                                 aria-labelledby="headingTwo">
+                                                <div class="panel-body">
+                                                    <div class="selects-container__mob">
+                                                        <form name="selectionsMob" id="selectionsMob" action>
+                                                            <select name="Select Vehicle" id value="Select Vehicle">
+                                                                <option value="Select">Select Vehicle</option>
+                                                                <option value="Audi">Audi</option>
+                                                                <option value="BMW">BMW</option>
+                                                                <option value="Volkswagen">Volkswagen</option>
+                                                            </select>
+                                                            <select name="Select Vehicle" id value="Select Vehicle">
+                                                                <option value="Select">Select Brand</option>
+                                                                <option value="Audi">Audi</option>
+                                                                <option value="BMW">BMW</option>
+                                                                <option value="Volkswagen">Volkswagen</option>
+                                                            </select>
+                                                            <select name="Select Vehicle" id value="Select Vehicle">
+                                                                <option value="Select">Select Model</option>
+                                                                <option value="Audi">Audi</option>
+                                                                <option value="BMW">BMW</option>
+                                                                <option value="Volkswagen">Volkswagen</option>
+                                                            </select>
+                                                            <select name="Select Vehicle" id value="Select Vehicle">
+                                                                <option value="Select">Select Type</option>
+                                                                <option value="Audi">Audi</option>
+                                                                <option value="BMW">BMW</option>
+                                                                <option value="Volkswagen">Volkswagen</option>
+                                                            </select>
+                                                        </form>
+                                                    </div>
+                                                    <div class="go-button__mob2">
+                                                        <a href="#"
+                                                           onclick="document.getElementById('selectionsMob').submit()"
+                                                           class="go-button__mob-action2">Find</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--End of Mobile Filter-->
                         </div>
                     </div>
                 </section>
-                <!--End filter desktop-->
             </section>
         </td>
     </tr>

@@ -104,11 +104,13 @@
     }
   }
 }
+
 .selects-container {
   display: table-cell;
   padding-left: 40px;
   width: 760px;
 }
+
 .selects-container select {
   width: 187px;
   height: 30px;
@@ -122,5 +124,230 @@
   &:focus {
     outline: none !important;
     box-shadow: 0 1px 5px #605d5d;
+  }
+}
+
+//Mobile filter container
+.filter-mob-column {
+  padding: 0;
+  & > .filter-mob-container-row {
+    margin: 0;
+    & > #accordion {
+      margin-bottom: 0;
+      & > .reg-panel,
+      & > .select-panel {
+        border: none;
+        border-radius: 0;
+        min-height: 45px;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+#accordion .reg-panel {
+  background: @main-grey;
+}
+
+#accordion .select-panel {
+  margin-top: 0;
+  background: #ffffff;
+}
+
+#headingOne,
+#headingTwo {
+  background: transparent;
+  padding: 15px 0 15px 20px;
+  & > h4 {
+    font-family: "Panton-Bold";
+    font-size: 15px;
+    color: #5c5c5c;
+    text-transform: uppercase;
+    & > a {
+      display: inline-block;
+      width: 100%;
+      position: relative;
+      & > .arrow-down {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        display: none;
+      }
+      &:hover,
+      &:focus,
+      &:active,
+      &:visited {
+        text-decoration: none;
+      }
+    }
+    & > a.collapsed .arrow-down {
+      display: inline-block;
+    }
+  }
+}
+
+#headingTwo {
+  padding-top: 30px;
+  padding-bottom: 0;
+  position: relative;
+  &:before {
+    position: absolute;
+    content: '';
+    height: 1px;
+    width: 90%;
+    background: #d4d4d4;
+    left: 20px;
+    top: 8px;
+    z-index: 1;
+  }
+}
+
+#collapseOne {
+  border-top: 0;
+  background: #ffffff;
+  padding: 10px 15px;
+  & > .panel-body {
+    border-top: 0;
+  }
+}
+#collapseTwo {
+  border-top: 0;
+  background: #ffffff;
+
+  & > .panel-body {
+    border-top: 0;
+    padding: 7px 20px;
+  }
+}
+
+.reg-number-container__mob {
+  width: 70%;
+  display: table-cell;
+  position: relative;
+  & > .reg-number__mob {
+    width: 212px;
+    height: 35px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+  }
+}
+
+#reg-input-mob {
+  width: 208px;
+  height: 31px;
+  padding-left: 32px;
+  background: @main-yellow;
+  border-radius: 0 5px 5px 0;
+  border: 0;
+  font-size: 16px;
+  font-family: "Panton-Bold";
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #000000;
+    text-align: center;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: #000000;
+    text-align: center;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: #000000;
+    text-align: center;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: #000000;
+    text-align: center;
+  }
+}
+
+.reg-label__mob {
+  position: absolute;
+  width: 27px;
+  height: 35px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border: 0;
+  border-radius: 5px 0 0 5px;
+  text-align: center;
+  overflow: hidden;
+  & > img {
+    height: 100%;
+    width: auto;
+  }
+}
+
+.go-button__mob1 {
+  display: table-cell;
+  padding-left: 15px;
+  vertical-align: middle;
+  width: 25%;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  & > .go-button__mob-action1 {
+    background: #003399;
+    border: 0;
+    border-radius: 10px;
+    font-family: "Panton";
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 9px 15px;
+  }
+}
+#Or {
+  position: absolute;
+  width: 42px;
+  background: #ffffff;
+  text-align: center;
+  color: #7f7f7f;
+  top: -29px;
+  left: 50%;
+  margin-left: -21px;
+  z-index: 2;
+}
+.selects-container__mob {
+  display: block;
+  width: 100%;
+}
+
+.selects-container__mob select {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 11px;
+  border: 1px solid #2e2822;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-align-last: center;
+  background: url("../images/caret_down.png") 95% 50% no-repeat;
+  &:focus {
+    outline: none !important;
+    box-shadow: 0 1px 5px #605d5d;
+  }
+}
+.go-button__mob2 {
+  display: block;
+  vertical-align: middle;
+  width: 90%;
+  height: 35px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 35px;
+  & > .go-button__mob-action2 {
+    display: inline-block;
+    width: 100%;
+    height: 31px;
+    line-height: 31px;
+    background: @main-yellow;
+    border: 0;
+    border-radius: 50px;
+    font-family: "Panton";
+    font-size: 15px;
+    font-weight: 600;
+    color: #000000;
+    padding: 0px 20px;
   }
 }
