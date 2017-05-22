@@ -1,0 +1,53 @@
+@import "_fonts";
+@import "_vars";
+
+
+@media (max-width: 1200px) {
+  .main-nav__item-expanded-container {
+    width: 765px;
+    padding: 15px;
+  }
+
+  .main-nav__item-expanded-item {
+    width: 50%;
+    border-top: 1px solid #d8d8d8;
+    border-right: 1px solid #d8d8d8;
+    &:nth-child(-n+4) {
+      border-top: 1px solid #d8d8d8;
+    }
+    &:first-child,
+    &:nth-child(2) {
+      border-top: none;
+    }
+    &:nth-child(2n),
+    &:last-child {
+      border-right: none;
+    }
+  }
+  #dropdown2 {
+    left: -200px;
+  }
+  #dropdown3 {
+    left: -220px;
+  }
+  #dropdown4 {
+    left: -520px;
+  }
+  #dropdown5 {
+    left: -560px;
+  }
+  .selects-container {;
+    padding-left: 10px;
+  }
+
+  .selects-container select {
+    padding-left: 20px;
+    width: 150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .global-header__secondline {
+    min-height: 1px;
+  }
+}

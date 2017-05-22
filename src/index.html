@@ -16,6 +16,7 @@
     <tr>
         <td align="left" colspan="1" rowspan="1" valign="top" id="CentralArea">
             <section class="content-wrapper">
+                <!--HEADER-->
                 <header class="global-header">
                     <!--HEADER__FirstLine-->
                     <div class="global-header__firstline">
@@ -37,26 +38,31 @@
                                 </div>
                                 <div class="nav-search-container col-md-10 visible-lg-block visible-md-block hidden-sm hidden-xs"
                                      id="search-expanded" class="navbar-collapse collapse" aria-expanded="false">
-                                    <form name="search" method="get"
-                                          action="http://search.stores.ebay.com/search/search.dll?GetResult&"
-                                          class="nav-search-form">
-                                        <input type="search" name="query" class="form-control nav-search-form__input"
-                                               placeholder="What are you looking for?">
-                                        <button class="btn btn-default nav-search-form__btn-search">
-                                            <i class="fa fa-search" aria-hidden="true"></i>
-                                        </button>
-                                    </form>
+                                    <div class="search-input">
+                                        <form name="search" method="get"
+                                              action="http://search.stores.ebay.com/search/search.dll?GetResult&"
+                                              class="nav-search-form">
+                                            <input type="search" name="query"
+                                                   class="form-control nav-search-form__input"
+                                                   placeholder="What are you looking for?">
+                                            <input type="hidden" name="fcd" value="2">
+                                            <input type="hidden" name="from" value="R10">
+                                            <input type="hidden" name="sid" value="168477575">
+                                            <button class="btn btn-default nav-search-form__btn-search">
+                                                <i class="fa fa-search" aria-hidden="true"></i>
+                                            </button>
+                                        </form>
+                                    </div>
                                 </div>
                                 <div class="cart-box hidden-lg hidden-md visible-sm-inline-block visible-xs-inline-block col-xs-2">
-                                    <div class="glyphicon glyphicon-shopping-cart"></div>
-                                    <div class="input-group input-group-sm">
-                                        <span class="input-group-addon">&pound;</span>
-                                        <span class="input-group-addon">0.00</span>
-                                        <!--<input type="text" class="form-control" name="amount" id="amount" value="0.00">-->
+                                    <div class="glyphicon glyphicon-shopping-cart" id="cart"></div>
+                                    <div id="summ_cart">
+                                        <span id="summ_currency">&pound;</span>
+                                        <span id="summ_number">0.00</span>
                                     </div>
                                 </div>
                                 <div class="navbtn-box hidden-lg hidden-md visible-sm-inline-block visible-xs-inline-block col-xs-2">
-                                    <button data-toggle="collapse" data-target="#main-nav" aria-expanded="false"
+                                    <button type="button" data-toggle="collapse" data-target="#main-nav"
                                             class="navbtn navbar-toggle collapsed">
                                         <span class="sr-only">Toggle navigation</span>
                                         <span class="fa fa-bars"></span>
@@ -68,16 +74,16 @@
                     <!--HEADER__SecondLine-->
                     <div class="global-header__secondline container-fluid">
                         <div class="row">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <nav class="navbar navbar-default main-nav">
+                            <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs">
+                                <nav class="navbar navbar-default main-nav" role="navigation">
                                     <div class="container">
                                         <div class="navbar-header main-nav__navbar-header">
-                                            <div id="main-nav" class="navbar-collapse collapse" aria-expanded="false"
+                                            <div id="main-nav" class="navbar-collapse collapse"
                                                  style="height: 1px;">
                                                 <ul class="nav navbar-nav main-nav__nav">
                                                     <li class="main-nav__item">
                                                         <a href="#" class="main-nav__link">headlights & lighting</a>
-                                                        <div class="main-nav__item-expanded-container">
+                                                        <div class="main-nav__item-expanded-container" id="dropdown1">
                                                             <ul class="main-nav__item-expanded-list">
                                                                 <li class="main-nav__item-expanded-item">
                                                                     <a href="#" class="main-nav__item-expanded-link">
@@ -244,15 +250,231 @@
                                                     </li>
                                                     <li class="main-nav__item">
                                                         <a href="#" class="main-nav__link">replacement parts</a>
+                                                        <div class="main-nav__item-expanded-container" id="dropdown2">
+                                                            <ul class="main-nav__item-expanded-list">
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part1.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part2.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part3.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part4.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part5.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
                                                     </li>
                                                     <li class="main-nav__item">
                                                         <a href="#" class="main-nav__link">auto body parts</a>
+                                                        <div class="main-nav__item-expanded-container" id="dropdown3">
+                                                            <ul class="main-nav__item-expanded-list">
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part1.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part2.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part3.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part4.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part5.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part6.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part7.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
                                                     </li>
                                                     <li class="main-nav__item">
                                                         <a href="#" class="main-nav__link">interior accessories</a>
+                                                        <div class="main-nav__item-expanded-container" id="dropdown4">
+                                                            <ul class="main-nav__item-expanded-list">
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part1.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part2.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part3.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
                                                     </li>
                                                     <li class="main-nav__item">
                                                         <a href="#" class="main-nav__link">exterior accessories</a>
+                                                        <div class="main-nav__item-expanded-container" id="dropdown5">
+                                                            <ul class="main-nav__item-expanded-list">
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part1.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part2.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part3.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part4.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part5.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part6.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part7.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part8.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part9.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                                <li class="main-nav__item-expanded-item">
+                                                                    <a href="#" class="main-nav__item-expanded-link">
+                                                                        <img src="images/item_part10.png"
+                                                                             alt="choose item"
+                                                                             class="main-nav__item-expanded-link-img">
+                                                                        <span class="main-nav__item-expanded-link-text">Lorem ipsum dolor sit amet, consectetur.</span>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -263,11 +485,70 @@
                         </div>
                     </div>
                 </header>
+                <!--FILTER-->
+                <!--Filter desktop-->
+                <section class="filter-container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="filter-column col-md-12 hidden-sm hidden-xs">
+                                <div class="filter-container-row">
+                                    <div class="reg-number-container">
+                                        <div class="reg-number">
+                                            <form name="reg" id="regNumber" action>
+                                                <input id="reg-input" type="text" placeholder="&nbsp; ENTER REG">
+                                                <div class="reg-label">
+                                                    <img src="images/gb.png" alt="GB">
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="go-button">
+                                        <a href="#" onclick="document.getElementById('regNumber').submit()"
+                                           class="go-button__action">Go</a>
+                                    </div>
+                                    <div class="selects-container">
+                                        <select name="Select Vehicle" id value="Select Vehicle">
+                                            <option value="Select">Select Vehicle</option>
+                                            <option value="Audi">Audi</option>
+                                            <option value="BMW">BMW</option>
+                                            <option value="Volkswagen">Volkswagen</option>
+                                        </select>
+                                        <select name="Select Vehicle" id value="Select Vehicle">
+                                            <option value="Select">Select Brand</option>
+                                            <option value="Audi">Audi</option>
+                                            <option value="BMW">BMW</option>
+                                            <option value="Volkswagen">Volkswagen</option>
+                                        </select>
+                                        <select name="Select Vehicle" id value="Select Vehicle">
+                                            <option value="Select">Select Model</option>
+                                            <option value="Audi">Audi</option>
+                                            <option value="BMW">BMW</option>
+                                            <option value="Volkswagen">Volkswagen</option>
+                                        </select>
+                                        <select name="Select Vehicle" id value="Select Vehicle">
+                                            <option value="Select">Select Type</option>
+                                            <option value="Audi">Audi</option>
+                                            <option value="BMW">BMW</option>
+                                            <option value="Volkswagen">Volkswagen</option>
+                                        </select>
+                                    </div>
+                                    <div class="go-button">
+                                        <a href="#" class="go-button__action">Find</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!--End filter desktop-->
             </section>
         </td>
     </tr>
     </tbody>
 </table>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <script src="js/app.min.js"></script>
 </body>
 </html>

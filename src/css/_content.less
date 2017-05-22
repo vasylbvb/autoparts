@@ -1,2 +1,126 @@
 @import "_fonts";
 @import "_vars";
+
+//Filter container
+.filter-container {
+  min-width: 100%;
+  height: 80px;
+  padding: 0;
+  padding-top: 36px;
+  background: #ffffff;
+  & > .container {
+    max-width: @main-width;
+    margin: 0 auto;
+    padding: 0;
+    height: 100%;
+    & > .row {
+      max-width: @main-width;
+      height: inherit;
+      margin: 0;
+      & > .filter-column {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.filter-container-row {
+  position: relative;
+  width: 100%;
+  & > .reg-number-container {
+    width: 10%;
+    display: table-cell;
+    & > .reg-number {
+      width: 160px;
+      height: 35px;
+      border: 2px solid #000000;
+      border-radius: 5px;
+    }
+  }
+}
+
+#reg-input {
+  width: 156px;
+  height: 31px;
+  padding-left: 30px;
+  background: @main-yellow;
+  border-radius: 0 5px 5px 0;
+  border: 0;
+  font-size: 18px;
+  font-family: "Panton-Bold";
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #000000;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: #000000;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: #000000;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: #000000;
+  }
+}
+
+.reg-label {
+  position: absolute;
+  width: 25px;
+  height: 35px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border: 0;
+  border-radius: 5px 0 0 5px;
+  text-align: center;
+  overflow: hidden;
+  & > img {
+    height: 100%;
+    width: auto;
+  }
+}
+
+.go-button {
+  display: table-cell;
+  padding-left: 15px;
+  vertical-align: middle;
+  width: 80px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  & > .go-button__action {
+    background: @main-yellow;
+    border: 0;
+    border-radius: 50px;
+    font-family: "Panton";
+    font-size: 15px;
+    font-weight: 600;
+    color: #000000;
+    padding: 5px 20px;
+    transition: background .3s;
+    box-shadow: 0 1px 5px #605d5d;
+    &:hover {
+      text-decoration: none;
+      background: @main-yellow-hover;
+    }
+  }
+}
+.selects-container {
+  display: table-cell;
+  padding-left: 40px;
+  width: 760px;
+}
+.selects-container select {
+  width: 187px;
+  height: 30px;
+  border: 2px solid #2e2822;
+  border-radius: 5px;
+  padding-left: 47px;
+  font-size: 15px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("../images/caret_down.png") 95% 50% no-repeat;
+  &:focus {
+    outline: none !important;
+    box-shadow: 0 1px 5px #605d5d;
+  }
+}
