@@ -197,6 +197,27 @@
       }
     }
   }
+  .thumbnail-container {
+    height: 167px;
+    margin-bottom: 20px;
+  }
+  .thumbnail-container .thumbnail-box .thumbnail-link .thumbnail-img {
+    height: 137px;
+  }
+  .thumbnail-container .thumbnail-box .thumbnail-link .thumbnail-title {
+    height: 30px;
+    line-height: 20px;
+    font-size: 13px;
+  }
+  .thumbnail-container_long-title .thumbnail-box .thumbnail-link .thumbnail-title {
+    padding: 2px;
+    line-height: 1;
+    font-size: 12px;
+  }
+  .featured-products-filter {
+    margin-top: 10px;
+    text-align: left;
+  }
 }
 @media (max-width: 590px) {
   .category-item-footer-list {
@@ -217,5 +238,42 @@
   .logo-box-container {
     width: 45%;
     padding-right: 0;
+  }
+}
+
+//FIVE COLUMN GRID
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+.col-xs-5ths {
+  width: 20%;
+  float: left;
+}
+
+@media (min-width: 768px) {
+  .col-sm-5ths {
+    width: 20%;
+    float: left;
+  }
+}
+
+@media (min-width: 992px) {
+  .col-md-5ths {
+    width: 20%;
+    float: left;
+  }
+}
+
+@media (min-width: 1200px) {
+  .col-lg-5ths {
+    width: 20%;
+    float: left;
   }
 }
