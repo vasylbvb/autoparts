@@ -22,17 +22,18 @@
 }
 //gallery, description
 .gallery-details__row1 {
-  height: 337px;
+  min-height: 337px;
 }
 //gallery
 .gallery-img-container {
-  height: 100%;
+  min-height: 337px;
   margin-bottom: 60px;
 }
 
 //description
 .gallery-desc-container {
-  height: 100%;
+  min-height: 337px;
+  margin-bottom: 20px;
 }
 .gallery-desc__item-title {
   margin: 0 0 18px;
@@ -72,6 +73,7 @@ gallery-desc__info-delivery span {
 .gallery-desc__price-cart-box {
   margin-bottom: 35px;
   height: 42px;
+  position: relative;
   &:before {
     display: inline-block;
     content: '';
@@ -133,6 +135,7 @@ gallery-desc__info-delivery span {
   height: 58px;
   border-top: 1px solid #ebebeb;
   border-bottom: 1px solid #ebebeb;
+  position: relative;
   &:before {
     display: inline-block;
     content: '';
