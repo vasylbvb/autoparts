@@ -8,7 +8,7 @@
     <title>Genius Automotive_Category</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/6217773a04.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 <table cellspacing="0" cellpadding="0" border="0" width="100%">
@@ -25,16 +25,38 @@
                                 <div class="logo-box-container col-md-2 col-sm-4 col-xs-6">
                                     <a href="index.html" target="_blank" class="logo-box">
                                         <span class="logo__img-box">
-                                            <img src="images/logo.png" alt="logo" class="logo__img">
+                                            <img src="images/logo_v.png" alt="logo" class="logo__img">
                                         </span>
                                     </a>
                                 </div>
                                 <div class="searchbtn-box hidden-lg hidden-md hidden-sm visible-xs-inline-block col-xs-1">
-                                    <button data-toggle="collapse" data-target="#search-expanded" aria-expanded="false"
+                                    <!--Start of the analogue search without JS-->
+                                    <label for="search-toggle" class="searchbtn"><span
+                                            class="fa fa-search"></span></label>
+                                    <input type="checkbox" id="search-toggle"/>
+                                    <div class="nav-search-container" id="search-expanded-css-only">
+                                        <div class="search-input">
+                                            <form name="search" method="get"
+                                                  action="http://search.stores.ebay.com/search/search.dll?GetResult&"
+                                                  class="nav-search-form">
+                                                <input type="search" name="query"
+                                                       class="form-control nav-search-form__input"
+                                                       placeholder="What are you looking for?">
+                                                <input type="hidden" name="fcd" value="2">
+                                                <input type="hidden" name="from" value="R10">
+                                                <input type="hidden" name="sid" value="168477575">
+                                                <button class="btn btn-default nav-search-form__btn-search">
+                                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!--End of the analogue search without JS-->
+                                    <!--<button data-toggle="collapse" data-target="#search-expanded" aria-expanded="false"
                                             class="searchbtn navbar-toggle collapsed">
                                         <span class="sr-only">Toggle search field</span>
                                         <span class="fa fa-search"></span>
-                                    </button>
+                                    </button>-->
                                 </div>
                                 <div class="nav-search-container col-md-10 col-sm-8 hidden-xs"
                                      id="search-expanded" class="navbar-collapse collapse" aria-expanded="false">
@@ -62,11 +84,102 @@
                                     </div>
                                 </div>
                                 <div class="navbtn-box hidden-lg hidden-md hidden-sm visible-xs-inline-block col-xs-2">
-                                    <button type="button" data-toggle="collapse" data-target="#main-nav"
+                                    <!--Start of the analogue toggle menu without JS-->
+                                    <label for="menu-toggle" class="searchbtn"><span class="fa fa-bars"></span></label>
+                                    <input type="checkbox" id="menu-toggle"/>
+                                    <!--Start of Mobile Menu-->
+                                    <div id="main-nav-css-only">
+                                        <ul class="nav navbar-nav main-nav-mob__nav">
+                                            <li class="main-nav-mob__item link-white">
+                                                <a href="#" class="main-nav-mob__link" target="_blank">Heading and
+                                                    lighting
+                                                    <span class="tab-link fa fa-angle-right"></span></a>
+                                            </li>
+                                            <li class="main-nav-mob__item link-white">
+                                                <a href="#" class="main-nav-mob__link" target="_blank">Replacement parts
+                                                    <span
+                                                            class="tab-link fa fa-angle-right"></span></a>
+                                            </li>
+                                            <li class="main-nav-mob__item link-white">
+                                                <a href="#" class="main-nav-mob__link" target="_blank">Auto body parts
+                                                    <span
+                                                            class="tab-link fa fa-angle-right"></span></a>
+                                            </li>
+                                            <li class="main-nav-mob__item link-white">
+                                                <a href="category.html" class="main-nav-mob__link" target="_blank">Interior
+                                                    accessories
+                                                    <span class="tab-link fa fa-angle-right"></span></a>
+                                            </li>
+                                            <li class="main-nav-mob__item link-white">
+                                                <a href="#" class="main-nav-mob__link" target="_blank">Exterior
+                                                    accessories
+                                                    <span class="tab-link fa fa-angle-right"></span></a>
+                                            </li>
+                                            <li class="main-nav-mob__item link-white">
+                                                <a href="#" class="main-nav-mob__link" target="_blank">Log in <span
+                                                        class="tab-link fa fa-angle-right"></span></a>
+                                            </li>
+                                            <li class="main-nav-mob__item link-white">
+                                                <a href="#" class="main-nav-mob__link" target="_blank">Register <span
+                                                        class="tab-link fa fa-angle-right"></span></a>
+                                            </li>
+                                            <li class="main-nav-mob__item link-white">
+                                                <a href="#" class="main-nav-mob__link" target="_blank">Basket <span
+                                                        class="tab-link fa fa-angle-right"></span></a>
+                                            </li>
+                                        </ul>
+                                        <ul class="nav navbar-nav main-nav-mob__nav">
+                                            <li class="main-nav-mob__item link-yellow">
+                                                <a href="#" class="main-nav-mob__link" target="_blank"><span
+                                                        class="tab-link_yellow-icon"><img
+                                                        src="images/menu_my_acc.png"
+                                                        alt="My account"></span><span
+                                                        class="tab-link_yellow-text">My account</span></a>
+                                            </li>
+                                            <li class="main-nav-mob__item link-yellow">
+                                                <a href="#" class="main-nav-mob__link" target="_blank"><span
+                                                        class="tab-link_yellow-icon"><img
+                                                        src="images/menu_order_history.png"
+                                                        alt="Order history"></span><span
+                                                        class="tab-link_yellow-text">Order history</span></a>
+                                            </li>
+                                            <li class="main-nav-mob__item link-yellow">
+                                                <a href="#" class="main-nav-mob__link" target="_blank"><span
+                                                        class="tab-link_yellow-icon"><img
+                                                        src="images/menu_adress_book.png"
+                                                        alt="Adress book"></span><span
+                                                        class="tab-link_yellow-text">Adress book</span></a>
+                                            </li>
+                                            <li class="main-nav-mob__item link-yellow">
+                                                <a href="#" class="main-nav-mob__link" target="_blank"><span
+                                                        class="tab-link_yellow-icon"><img
+                                                        src="images/menu_products_alerts.png"
+                                                        alt="Product alerts"></span><span
+                                                        class="tab-link_yellow-text">Product alerts</span></a>
+                                            </li>
+                                            <li class="main-nav-mob__item link-yellow">
+                                                <a href="#" class="main-nav-mob__link" target="_blank"><span
+                                                        class="tab-link_yellow-icon"><img
+                                                        src="images/menu_notification.png"
+                                                        alt="Notifications"></span><span
+                                                        class="tab-link_yellow-text">Notifications</span></a>
+                                            </li>
+                                            <li class="main-nav-mob__item link-yellow">
+                                                <a href="#" class="main-nav-mob__link" target="_blank"><span
+                                                        class="tab-link_yellow-icon"><img
+                                                        src="images/menu_wish_list.png"
+                                                        alt="Wish list"></span><span
+                                                        class="tab-link_yellow-text">Wish list</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--End of Mobile Menu-->
+                                    <!--Start of the analogue toggle menu without JS-->
+                                    <!--<button type="button" data-toggle="collapse" data-target="#main-nav"
                                             class="navbtn navbar-toggle collapsed">
                                         <span class="sr-only">Toggle navigation</span>
                                         <span class="fa fa-bars"></span>
-                                    </button>
+                                    </button>-->
                                 </div>
                             </div>
                         </div>
@@ -530,7 +643,7 @@
                                 </nav>
                             </div>
                             <!--Start of Mobile Menu-->
-                            <div class="hidden-lg hidden-md hidden-sm visible-xs-block">
+                            <!--<div class="hidden-lg hidden-md hidden-sm visible-xs-block">
                                 <nav class="navbar navbar-default main-nav-mob" role="navigation">
                                     <div class="container">
                                         <div class="navbar-header main-nav-mob__navbar-header">
@@ -623,7 +736,7 @@
                                         </div>
                                     </div>
                                 </nav>
-                            </div>
+                            </div>-->
                             <!--End of Mobile Menu-->
                         </div>
                     </div>
@@ -684,10 +797,10 @@
                                 </div>
                             </div>
                             <!--End filter desktop-->
-                            <!--Start of Mobile Filter-->
                             <div class="filter-mob-column col-xs-12 hidden-lg hidden-md visible-sm-block visible-xs-block">
+                                <!--Start of Mobile Filter-->
                                 <div class="filter-mob-container-row">
-                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                    <!--<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                         <div class="panel panel-default reg-panel">
                                             <div class="panel-heading" role="tab" id="headingOne">
                                                 <h4 class="panel-title filter-heading1">
@@ -773,10 +886,89 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>-->
+                                    <!--End of Mobile Filter-->
+                                    <!--Start of analogue Mobile Filter without JS-->
+                                    <div id="accordion-css-only">
+                                        <div class="tab reg-panel">
+                                            <input id="tab-one" type="checkbox" name="tabs">
+                                            <label for="tab-one" class="accordion-lbl">Enter your number plate below
+                                                <span class="fa fa-angle-down arrow-down"></span>
+                                            </label>
+                                            <div class="tab-content">
+                                                <div id="collapseOne">
+                                                    <div class="panel-body">
+                                                        <div class="reg-number-container__mob">
+                                                            <div class="reg-number__mob">
+                                                                <form name="regMob" id="regNumberMob" action>
+                                                                    <input id="reg-input-mob" type="text"
+                                                                           placeholder="&nbsp; ENTER REG">
+                                                                    <div class="reg-label__mob">
+                                                                        <img src="images/gb.png" alt="GB">
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                        <div class="go-button__mob1">
+                                                            <a href="#"
+                                                               onclick="document.getElementById('regNumberMob').submit()"
+                                                               class="go-button__mob-action1">Go</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab select-panel">
+                                            <input id="tab-two" type="checkbox" name="tabs">
+                                            <label for="tab-two" class="accordion-lbl" id="headingTwo-mob">
+                                                <span id="Or-mob">Or</span>
+                                                Select your vehicle
+                                                <span class="fa fa-angle-down arrow-down"></span>
+                                            </label>
+                                            <div class="tab-content">
+                                                <div id="collapseTwo">
+                                                    <div class="panel-body">
+                                                        <div class="selects-container__mob">
+                                                            <form name="selectionsMob" id="selectionsMob" action>
+                                                                <select name="Select Vehicle" id value="Select Vehicle">
+                                                                    <option value="Select">Select Vehicle</option>
+                                                                    <option value="Audi">Audi</option>
+                                                                    <option value="BMW">BMW</option>
+                                                                    <option value="Volkswagen">Volkswagen</option>
+                                                                </select>
+                                                                <select name="Select Vehicle" id value="Select Vehicle">
+                                                                    <option value="Select">Select Brand</option>
+                                                                    <option value="Audi">Audi</option>
+                                                                    <option value="BMW">BMW</option>
+                                                                    <option value="Volkswagen">Volkswagen</option>
+                                                                </select>
+                                                                <select name="Select Vehicle" id value="Select Vehicle">
+                                                                    <option value="Select">Select Model</option>
+                                                                    <option value="Audi">Audi</option>
+                                                                    <option value="BMW">BMW</option>
+                                                                    <option value="Volkswagen">Volkswagen</option>
+                                                                </select>
+                                                                <select name="Select Vehicle" id value="Select Vehicle">
+                                                                    <option value="Select">Select Type</option>
+                                                                    <option value="Audi">Audi</option>
+                                                                    <option value="BMW">BMW</option>
+                                                                    <option value="Volkswagen">Volkswagen</option>
+                                                                </select>
+                                                            </form>
+                                                        </div>
+                                                        <div class="go-button__mob2">
+                                                            <a href="#"
+                                                               onclick="document.getElementById('selectionsMob').submit()"
+                                                               class="go-button__mob-action2">Find</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                                <!--End of analogue Mobile Filter without JS-->
                             </div>
-                            <!--End of Mobile Filter-->
                         </div>
                     </div>
                 </section>
@@ -911,7 +1103,7 @@
                                                     <li><img src="images/list.png" alt=""></li>
                                                     <li><img src="images/ok.png" alt=""></li>
                                                     <li><img src="images/delivery.png" alt=""></li>
-                                                    <li><img src="images/cart.png" alt=""></li>
+                                                    <li><img src="images/cart_v.png" alt=""></li>
                                                 </ul>
                                             </div>
                                         </a>
@@ -931,7 +1123,7 @@
                                                     <li><img src="images/list.png" alt=""></li>
                                                     <li><img src="images/ok.png" alt=""></li>
                                                     <li><img src="images/delivery.png" alt=""></li>
-                                                    <li><img src="images/cart.png" alt=""></li>
+                                                    <li><img src="images/cart_v.png" alt=""></li>
                                                 </ul>
                                             </div>
                                         </a>
@@ -951,7 +1143,7 @@
                                                     <li><img src="images/list.png" alt=""></li>
                                                     <li><img src="images/ok.png" alt=""></li>
                                                     <li><img src="images/delivery.png" alt=""></li>
-                                                    <li><img src="images/cart.png" alt=""></li>
+                                                    <li><img src="images/cart_v.png" alt=""></li>
                                                 </ul>
                                             </div>
                                         </a>
@@ -971,7 +1163,7 @@
                                                     <li><img src="images/list.png" alt=""></li>
                                                     <li><img src="images/ok.png" alt=""></li>
                                                     <li><img src="images/delivery.png" alt=""></li>
-                                                    <li><img src="images/cart.png" alt=""></li>
+                                                    <li><img src="images/cart_v.png" alt=""></li>
                                                 </ul>
                                             </div>
                                         </a>
@@ -991,7 +1183,7 @@
                                                     <li><img src="images/list.png" alt=""></li>
                                                     <li><img src="images/ok.png" alt=""></li>
                                                     <li><img src="images/delivery.png" alt=""></li>
-                                                    <li><img src="images/cart.png" alt=""></li>
+                                                    <li><img src="images/cart_v.png" alt=""></li>
                                                 </ul>
                                             </div>
                                         </a>
@@ -1011,7 +1203,7 @@
                                                     <li><img src="images/list.png" alt=""></li>
                                                     <li><img src="images/ok.png" alt=""></li>
                                                     <li><img src="images/delivery.png" alt=""></li>
-                                                    <li><img src="images/cart.png" alt=""></li>
+                                                    <li><img src="images/cart_v.png" alt=""></li>
                                                 </ul>
                                             </div>
                                         </a>
@@ -1031,7 +1223,7 @@
                                                     <li><img src="images/list.png" alt=""></li>
                                                     <li><img src="images/ok.png" alt=""></li>
                                                     <li><img src="images/delivery.png" alt=""></li>
-                                                    <li><img src="images/cart.png" alt=""></li>
+                                                    <li><img src="images/cart_v.png" alt=""></li>
                                                 </ul>
                                             </div>
                                         </a>
@@ -1051,7 +1243,7 @@
                                                     <li><img src="images/list.png" alt=""></li>
                                                     <li><img src="images/ok.png" alt=""></li>
                                                     <li><img src="images/delivery.png" alt=""></li>
-                                                    <li><img src="images/cart.png" alt=""></li>
+                                                    <li><img src="images/cart_v.png" alt=""></li>
                                                 </ul>
                                             </div>
                                         </a>
@@ -1071,7 +1263,7 @@
                                                     <li><img src="images/list.png" alt=""></li>
                                                     <li><img src="images/ok.png" alt=""></li>
                                                     <li><img src="images/delivery.png" alt=""></li>
-                                                    <li><img src="images/cart.png" alt=""></li>
+                                                    <li><img src="images/cart_v.png" alt=""></li>
                                                 </ul>
                                             </div>
                                         </a>
@@ -1091,7 +1283,7 @@
                                                     <li><img src="images/list.png" alt=""></li>
                                                     <li><img src="images/ok.png" alt=""></li>
                                                     <li><img src="images/delivery.png" alt=""></li>
-                                                    <li><img src="images/cart.png" alt=""></li>
+                                                    <li><img src="images/cart_v.png" alt=""></li>
                                                 </ul>
                                             </div>
                                         </a>
@@ -1111,7 +1303,7 @@
                                                     <li><img src="images/list.png" alt=""></li>
                                                     <li><img src="images/ok.png" alt=""></li>
                                                     <li><img src="images/delivery.png" alt=""></li>
-                                                    <li><img src="images/cart.png" alt=""></li>
+                                                    <li><img src="images/cart_v.png" alt=""></li>
                                                 </ul>
                                             </div>
                                         </a>
@@ -1131,7 +1323,7 @@
                                                     <li><img src="images/list.png" alt=""></li>
                                                     <li><img src="images/ok.png" alt=""></li>
                                                     <li><img src="images/delivery.png" alt=""></li>
-                                                    <li><img src="images/cart.png" alt=""></li>
+                                                    <li><img src="images/cart_v.png" alt=""></li>
                                                 </ul>
                                             </div>
                                         </a>
@@ -1173,9 +1365,9 @@
     </tr>
     </tbody>
 </table>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+<!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>-->
 <script src="js/app.min.js"></script>
 </body>
 </html>

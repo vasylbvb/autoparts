@@ -8,7 +8,7 @@
     <title>Genius Automotive</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/6217773a04.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
 <table cellspacing="0" cellpadding="0" border="0" width="100%">
@@ -25,16 +25,38 @@
                                 <div class="logo-box-container col-md-2 col-sm-4 col-xs-6">
                                     <a href="index.html" target="_blank" class="logo-box">
                                         <span class="logo__img-box">
-                                            <img src="images/logo.png" alt="logo" class="logo__img">
+                                            <img src="images/logo_v.png" alt="logo" class="logo__img">
                                         </span>
                                     </a>
                                 </div>
                                 <div class="searchbtn-box hidden-lg hidden-md hidden-sm visible-xs-inline-block col-xs-1">
-                                    <button data-toggle="collapse" data-target="#search-expanded" aria-expanded="false"
+                                    <!--Start of the analogue search without JS-->
+                                    <label for="search-toggle" class="searchbtn"><span
+                                            class="fa fa-search"></span></label>
+                                    <input type="checkbox" id="search-toggle"/>
+                                    <div class="nav-search-container" id="search-expanded-css-only">
+                                        <div class="search-input">
+                                            <form name="search" method="get"
+                                                  action="http://search.stores.ebay.com/search/search.dll?GetResult&"
+                                                  class="nav-search-form">
+                                                <input type="search" name="query"
+                                                       class="form-control nav-search-form__input"
+                                                       placeholder="What are you looking for?">
+                                                <input type="hidden" name="fcd" value="2">
+                                                <input type="hidden" name="from" value="R10">
+                                                <input type="hidden" name="sid" value="168477575">
+                                                <button class="btn btn-default nav-search-form__btn-search">
+                                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                                </button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <!--End of the analogue search without JS-->
+                                    <!--<button data-toggle="collapse" data-target="#search-expanded" aria-expanded="false"
                                             class="searchbtn navbar-toggle collapsed">
                                         <span class="sr-only">Toggle search field</span>
                                         <span class="fa fa-search"></span>
-                                    </button>
+                                    </button>-->
                                 </div>
                                 <div class="nav-search-container col-md-10 col-sm-8 hidden-xs"
                                      id="search-expanded" class="navbar-collapse collapse" aria-expanded="false">
@@ -62,11 +84,102 @@
                                     </div>
                                 </div>
                                 <div class="navbtn-box hidden-lg hidden-md hidden-sm visible-xs-inline-block col-xs-2">
-                                    <button type="button" data-toggle="collapse" data-target="#main-nav"
+                                    <!--Start of the analogue toggle menu without JS-->
+                                    <label for="menu-toggle" class="searchbtn"><span class="fa fa-bars"></span></label>
+                                    <input type="checkbox" id="menu-toggle"/>
+                                    <!--Start of Mobile Menu-->
+                                    <div id="main-nav-css-only">
+                                        <ul class="nav navbar-nav main-nav-mob__nav">
+                                            <li class="main-nav-mob__item link-white">
+                                                <a href="#" class="main-nav-mob__link" target="_blank">Heading and
+                                                    lighting
+                                                    <span class="tab-link fa fa-angle-right"></span></a>
+                                            </li>
+                                            <li class="main-nav-mob__item link-white">
+                                                <a href="#" class="main-nav-mob__link" target="_blank">Replacement parts
+                                                    <span
+                                                            class="tab-link fa fa-angle-right"></span></a>
+                                            </li>
+                                            <li class="main-nav-mob__item link-white">
+                                                <a href="#" class="main-nav-mob__link" target="_blank">Auto body parts
+                                                    <span
+                                                            class="tab-link fa fa-angle-right"></span></a>
+                                            </li>
+                                            <li class="main-nav-mob__item link-white">
+                                                <a href="category.html" class="main-nav-mob__link" target="_blank">Interior
+                                                    accessories
+                                                    <span class="tab-link fa fa-angle-right"></span></a>
+                                            </li>
+                                            <li class="main-nav-mob__item link-white">
+                                                <a href="#" class="main-nav-mob__link" target="_blank">Exterior
+                                                    accessories
+                                                    <span class="tab-link fa fa-angle-right"></span></a>
+                                            </li>
+                                            <li class="main-nav-mob__item link-white">
+                                                <a href="#" class="main-nav-mob__link" target="_blank">Log in <span
+                                                        class="tab-link fa fa-angle-right"></span></a>
+                                            </li>
+                                            <li class="main-nav-mob__item link-white">
+                                                <a href="#" class="main-nav-mob__link" target="_blank">Register <span
+                                                        class="tab-link fa fa-angle-right"></span></a>
+                                            </li>
+                                            <li class="main-nav-mob__item link-white">
+                                                <a href="#" class="main-nav-mob__link" target="_blank">Basket <span
+                                                        class="tab-link fa fa-angle-right"></span></a>
+                                            </li>
+                                        </ul>
+                                        <ul class="nav navbar-nav main-nav-mob__nav">
+                                            <li class="main-nav-mob__item link-yellow">
+                                                <a href="#" class="main-nav-mob__link" target="_blank"><span
+                                                        class="tab-link_yellow-icon"><img
+                                                        src="images/menu_my_acc.png"
+                                                        alt="My account"></span><span
+                                                        class="tab-link_yellow-text">My account</span></a>
+                                            </li>
+                                            <li class="main-nav-mob__item link-yellow">
+                                                <a href="#" class="main-nav-mob__link" target="_blank"><span
+                                                        class="tab-link_yellow-icon"><img
+                                                        src="images/menu_order_history.png"
+                                                        alt="Order history"></span><span
+                                                        class="tab-link_yellow-text">Order history</span></a>
+                                            </li>
+                                            <li class="main-nav-mob__item link-yellow">
+                                                <a href="#" class="main-nav-mob__link" target="_blank"><span
+                                                        class="tab-link_yellow-icon"><img
+                                                        src="images/menu_adress_book.png"
+                                                        alt="Adress book"></span><span
+                                                        class="tab-link_yellow-text">Adress book</span></a>
+                                            </li>
+                                            <li class="main-nav-mob__item link-yellow">
+                                                <a href="#" class="main-nav-mob__link" target="_blank"><span
+                                                        class="tab-link_yellow-icon"><img
+                                                        src="images/menu_products_alerts.png"
+                                                        alt="Product alerts"></span><span
+                                                        class="tab-link_yellow-text">Product alerts</span></a>
+                                            </li>
+                                            <li class="main-nav-mob__item link-yellow">
+                                                <a href="#" class="main-nav-mob__link" target="_blank"><span
+                                                        class="tab-link_yellow-icon"><img
+                                                        src="images/menu_notification.png"
+                                                        alt="Notifications"></span><span
+                                                        class="tab-link_yellow-text">Notifications</span></a>
+                                            </li>
+                                            <li class="main-nav-mob__item link-yellow">
+                                                <a href="#" class="main-nav-mob__link" target="_blank"><span
+                                                        class="tab-link_yellow-icon"><img
+                                                        src="images/menu_wish_list.png"
+                                                        alt="Wish list"></span><span
+                                                        class="tab-link_yellow-text">Wish list</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!--End of Mobile Menu-->
+                                    <!--Start of the analogue toggle menu without JS-->
+                                    <!--<button type="button" data-toggle="collapse" data-target="#main-nav"
                                             class="navbtn navbar-toggle collapsed">
                                         <span class="sr-only">Toggle navigation</span>
                                         <span class="fa fa-bars"></span>
-                                    </button>
+                                    </button>-->
                                 </div>
                             </div>
                         </div>
@@ -80,11 +193,13 @@
                                         <div class="navbar-header main-nav__navbar-header">
                                             <ul class="nav navbar-nav main-nav__nav">
                                                 <li class="main-nav__item">
-                                                    <a href="#" class="main-nav__link" target="_blank">headlights & lighting</a>
+                                                    <a href="#" class="main-nav__link" target="_blank">headlights &
+                                                        lighting</a>
                                                     <div class="main-nav__item-expanded-container" id="dropdown1">
                                                         <ul class="main-nav__item-expanded-list">
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part1.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -92,7 +207,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part2.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -100,7 +216,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part3.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -108,7 +225,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part4.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -116,7 +234,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part5.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -124,7 +243,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part6.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -132,7 +252,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part7.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -140,7 +261,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part8.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -148,7 +270,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part9.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -156,7 +279,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part10.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -164,7 +288,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part1.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -172,7 +297,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part2.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -180,7 +306,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part3.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -188,7 +315,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part4.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -196,7 +324,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part5.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -204,7 +333,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part6.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -212,7 +342,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part7.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -220,7 +351,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part8.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -228,7 +360,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part9.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -236,7 +369,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part10.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -247,11 +381,13 @@
                                                     </div>
                                                 </li>
                                                 <li class="main-nav__item">
-                                                    <a href="#" class="main-nav__link" target="_blank">replacement parts</a>
+                                                    <a href="#" class="main-nav__link" target="_blank">replacement
+                                                        parts</a>
                                                     <div class="main-nav__item-expanded-container" id="dropdown2">
                                                         <ul class="main-nav__item-expanded-list">
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part1.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -259,7 +395,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part2.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -267,7 +404,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part3.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -275,7 +413,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part4.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -283,7 +422,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part5.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -294,11 +434,13 @@
                                                     </div>
                                                 </li>
                                                 <li class="main-nav__item">
-                                                    <a href="#" class="main-nav__link" target="_blank">auto body parts</a>
+                                                    <a href="#" class="main-nav__link" target="_blank">auto body
+                                                        parts</a>
                                                     <div class="main-nav__item-expanded-container" id="dropdown3">
                                                         <ul class="main-nav__item-expanded-list">
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part1.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -306,7 +448,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part2.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -314,7 +457,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part3.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -322,7 +466,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part4.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -330,7 +475,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part5.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -338,7 +484,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part6.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -346,7 +493,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part7.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -357,11 +505,13 @@
                                                     </div>
                                                 </li>
                                                 <li class="main-nav__item">
-                                                    <a href="category.html" class="main-nav__link" target="_blank">interior accessories</a>
+                                                    <a href="category.html" class="main-nav__link" target="_blank">interior
+                                                        accessories</a>
                                                     <div class="main-nav__item-expanded-container" id="dropdown4">
                                                         <ul class="main-nav__item-expanded-list">
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part1.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -369,7 +519,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part2.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -377,7 +528,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part3.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -388,11 +540,13 @@
                                                     </div>
                                                 </li>
                                                 <li class="main-nav__item">
-                                                    <a href="#" class="main-nav__link" target="_blank">exterior accessories</a>
+                                                    <a href="#" class="main-nav__link" target="_blank">exterior
+                                                        accessories</a>
                                                     <div class="main-nav__item-expanded-container" id="dropdown5">
                                                         <ul class="main-nav__item-expanded-list">
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part1.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -400,7 +554,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part2.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -408,7 +563,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part3.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -416,7 +572,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part4.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -424,7 +581,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part5.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -432,7 +590,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part6.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -440,7 +599,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part7.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -448,7 +608,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part8.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -456,7 +617,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part9.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -464,7 +626,8 @@
                                                                 </a>
                                                             </li>
                                                             <li class="main-nav__item-expanded-item">
-                                                                <a href="#" class="main-nav__item-expanded-link" target="_blank">
+                                                                <a href="#" class="main-nav__item-expanded-link"
+                                                                   target="_blank">
                                                                     <img src="images/item_part10.png"
                                                                          alt="choose item"
                                                                          class="main-nav__item-expanded-link-img">
@@ -480,7 +643,7 @@
                                 </nav>
                             </div>
                             <!--Start of Mobile Menu-->
-                            <div class="hidden-lg hidden-md hidden-sm visible-xs-block">
+                            <!--<div class="hidden-lg hidden-md hidden-sm visible-xs-block">
                                 <nav class="navbar navbar-default main-nav-mob" role="navigation">
                                     <div class="container">
                                         <div class="navbar-header main-nav-mob__navbar-header">
@@ -565,7 +728,7 @@
                                         </div>
                                     </div>
                                 </nav>
-                            </div>
+                            </div>-->
                             <!--End of Mobile Menu-->
                         </div>
                     </div>
@@ -626,10 +789,10 @@
                                 </div>
                             </div>
                             <!--End filter desktop-->
-                            <!--Start of Mobile Filter-->
                             <div class="filter-mob-column col-xs-12 hidden-lg hidden-md visible-sm-block visible-xs-block">
+                                <!--Start of Mobile Filter-->
                                 <div class="filter-mob-container-row">
-                                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                    <!--<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                                         <div class="panel panel-default reg-panel">
                                             <div class="panel-heading" role="tab" id="headingOne">
                                                 <h4 class="panel-title filter-heading1">
@@ -715,19 +878,95 @@
                                                 </div>
                                             </div>
                                         </div>
+                                    </div>-->
+                                    <!--End of Mobile Filter-->
+                                    <!--Start of analogue Mobile Filter without JS-->
+                                    <div id="accordion-css-only">
+                                        <div class="tab reg-panel">
+                                            <input id="tab-one" type="checkbox" name="tabs">
+                                            <label for="tab-one" class="accordion-lbl">Enter your number plate below
+                                                <span class="fa fa-angle-down arrow-down"></span>
+                                            </label>
+                                            <div class="tab-content">
+                                                <div id="collapseOne">
+                                                    <div class="panel-body">
+                                                        <div class="reg-number-container__mob">
+                                                            <div class="reg-number__mob">
+                                                                <form name="regMob" id="regNumberMob" action>
+                                                                    <input id="reg-input-mob" type="text"
+                                                                           placeholder="&nbsp; ENTER REG">
+                                                                    <div class="reg-label__mob">
+                                                                        <img src="images/gb.png" alt="GB">
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                        <div class="go-button__mob1">
+                                                            <a href="#"
+                                                               onclick="document.getElementById('regNumberMob').submit()"
+                                                               class="go-button__mob-action1">Go</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="tab select-panel">
+                                            <input id="tab-two" type="checkbox" name="tabs">
+                                            <label for="tab-two" class="accordion-lbl" id="headingTwo-mob">
+                                                <span id="Or-mob">Or</span>
+                                                Select your vehicle
+                                                <span class="fa fa-angle-down arrow-down"></span>
+                                            </label>
+                                            <div class="tab-content">
+                                                <div id="collapseTwo">
+                                                    <div class="panel-body">
+                                                        <div class="selects-container__mob">
+                                                            <form name="selectionsMob" id="selectionsMob" action>
+                                                                <select name="Select Vehicle" id value="Select Vehicle">
+                                                                    <option value="Select">Select Vehicle</option>
+                                                                    <option value="Audi">Audi</option>
+                                                                    <option value="BMW">BMW</option>
+                                                                    <option value="Volkswagen">Volkswagen</option>
+                                                                </select>
+                                                                <select name="Select Vehicle" id value="Select Vehicle">
+                                                                    <option value="Select">Select Brand</option>
+                                                                    <option value="Audi">Audi</option>
+                                                                    <option value="BMW">BMW</option>
+                                                                    <option value="Volkswagen">Volkswagen</option>
+                                                                </select>
+                                                                <select name="Select Vehicle" id value="Select Vehicle">
+                                                                    <option value="Select">Select Model</option>
+                                                                    <option value="Audi">Audi</option>
+                                                                    <option value="BMW">BMW</option>
+                                                                    <option value="Volkswagen">Volkswagen</option>
+                                                                </select>
+                                                                <select name="Select Vehicle" id value="Select Vehicle">
+                                                                    <option value="Select">Select Type</option>
+                                                                    <option value="Audi">Audi</option>
+                                                                    <option value="BMW">BMW</option>
+                                                                    <option value="Volkswagen">Volkswagen</option>
+                                                                </select>
+                                                            </form>
+                                                        </div>
+                                                        <div class="go-button__mob2">
+                                                            <a href="#"
+                                                               onclick="document.getElementById('selectionsMob').submit()"
+                                                               class="go-button__mob-action2">Find</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                                <!--End of analogue Mobile Filter without JS-->
                             </div>
-                            <!--End of Mobile Filter-->
                         </div>
                     </div>
                 </section>
                 <!--Start of Slider Section-->
                 <section style="height: 445px; background-color: blue;"></section>
                 <!--End of Slider Section-->
-                <!--Start of Mobile Slider Section-->
-                <section class="mobile-slider_wrapper" style="display: none;"></section>
-                <!--End of Mobile Slider Section-->
                 <section class="middle-content-wrapper">
                     <div class="middle-stripe-first"></div>
                     <div class="middle-stripe-second"></div>
@@ -980,6 +1219,263 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!--Start of Mobile Slider Section-->
+                                <!-- MOBILE SLIDER -->
+                                <div id="slideshow-wrap"
+                                     class="middle-menu-nav__parent hidden-lg hidden-md hidden-sm visible-xs-block col-xs-12">
+                                    <input type="radio" id="button-1" name="controls" checked="checked"/>
+                                    <label style="visibility: hidden;" for="button-1"> </label>
+                                    <input type="radio" id="button-2" name="controls"/>
+                                    <label style="visibility: hidden;" for="button-2"> </label>
+                                    <input type="radio" id="button-3" name="controls"/>
+                                    <label style="visibility: hidden;" for="button-3"> </label>
+                                    <input type="radio" id="button-4" name="controls"/>
+                                    <label style="visibility: hidden;" for="button-4"> </label>
+                                    <input type="radio" id="button-5" name="controls"/>
+                                    <label style="visibility: hidden;" for="button-5"> </label>
+                                    <label for="button-1" class="arrows" id="arrow-1"> <img
+                                            src="http://geniusautoparts.com/static/ebay/right_a70foz.png"/> </label>
+                                    <label for="button-2" class="arrows" id="arrow-2"> <img
+                                            src="http://geniusautoparts.com/static/ebay/right_a70foz.png"/> </label>
+                                    <label for="button-3" class="arrows" id="arrow-3"> <img
+                                            src="http://geniusautoparts.com/static/ebay/right_a70foz.png"/> </label>
+                                    <label for="button-4" class="arrows" id="arrow-4"> <img
+                                            src="http://geniusautoparts.com/static/ebay/right_a70foz.png"/> </label>
+                                    <label for="button-5" class="arrows" id="arrow-5"> <img
+                                            src="http://geniusautoparts.com/static/ebay/right_a70foz.png"/> </label>
+                                    <div id="slideshow-inner">
+                                        <ul>
+                                            <li id="slide1">
+                                                <div class="middle-menu-nav__parent">
+                                                    <div class="middle-menu-nav middle-menu-nav1">
+                                                        <a href="#" target="_blank" class="middle-menu-nav__link">
+                                                            <span class="middle-menu-nav__link-header">headlight &amp; lighting</span>
+                                                        </a>
+                                                        <div class="middle-menu-nav__inner-text">
+                                                            <ul class="middle-menu-nav__inner-text-list">
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">LED bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Xenon bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Headlight bulb kits</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Sidelight bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Foglight bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Indicator bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Brake light bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Number plate bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Reversing light
+                                                                        bulbs</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="middle-menu-nav__btn-container">
+                                                            <a href="#" target="_blank" class="middle-menu-nav__btn">View
+                                                                all</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="slide2">
+                                                <div class="middle-menu-nav__parent">
+                                                    <div class="middle-menu-nav middle-menu-nav2">
+                                                        <a href="#" target="_blank" class="middle-menu-nav__link">
+                                                            <span class="middle-menu-nav__link-header">Replacement parts</span>
+                                                        </a>
+                                                        <div class="middle-menu-nav__inner-text">
+                                                            <ul class="middle-menu-nav__inner-text-list">
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">LED bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Xenon bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Headlight bulb kits</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Sidelight bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Foglight bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Indicator bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Brake light bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Number plate bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Reversing light
+                                                                        bulbs</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="middle-menu-nav__btn-container">
+                                                            <a href="#" target="_blank" class="middle-menu-nav__btn">View
+                                                                all</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="slide3">
+                                                <div class="middle-menu-nav__parent">
+                                                    <div class="middle-menu-nav middle-menu-nav3">
+                                                        <a href="#" target="_blank" class="middle-menu-nav__link">
+                                                            <span class="middle-menu-nav__link-header">Auto body parts</span>
+                                                        </a>
+                                                        <div class="middle-menu-nav__inner-text">
+                                                            <ul class="middle-menu-nav__inner-text-list">
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">LED bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Xenon bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Headlight bulb kits</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Sidelight bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Foglight bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Indicator bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Brake light bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Number plate bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Reversing light
+                                                                        bulbs</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="middle-menu-nav__btn-container">
+                                                            <a href="#" target="_blank" class="middle-menu-nav__btn">View
+                                                                all</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="slide4">
+                                                <div class="middle-menu-nav__parent">
+                                                    <div class="middle-menu-nav middle-menu-nav4">
+                                                        <a href="#" target="_blank" class="middle-menu-nav__link">
+                                                            <span class="middle-menu-nav__link-header">Exterior accessories</span>
+                                                        </a>
+                                                        <div class="middle-menu-nav__inner-text">
+                                                            <ul class="middle-menu-nav__inner-text-list">
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">LED bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Xenon bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Headlight bulb kits</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Sidelight bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Foglight bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Indicator bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Brake light bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Number plate bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Reversing light
+                                                                        bulbs</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="middle-menu-nav__btn-container">
+                                                            <a href="#" target="_blank" class="middle-menu-nav__btn">View
+                                                                all</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li id="slide5">
+                                                <div class="middle-menu-nav__parent">
+                                                    <div class="middle-menu-nav middle-menu-nav5">
+                                                        <a href="category.html" target="_blank"
+                                                           class="middle-menu-nav__link">
+                                                            <span class="middle-menu-nav__link-header">Interior accessories</span>
+                                                        </a>
+                                                        <div class="middle-menu-nav__inner-text">
+                                                            <ul class="middle-menu-nav__inner-text-list">
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">LED bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Xenon bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Headlight bulb kits</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Sidelight bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Foglight bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Indicator bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Brake light bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Number plate bulbs</a>
+                                                                </li>
+                                                                <li class="middle-menu-nav__inner-text-item">
+                                                                    <a href="#" target="_blank">Reversing light
+                                                                        bulbs</a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="middle-menu-nav__btn-container">
+                                                            <a href="#" target="_blank" class="middle-menu-nav__btn">View
+                                                                all</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <!-- END OF MOBILE SLIDER -->
+                                <!--End of Mobile Slider Section-->
                                 <div class="middle-menu-nav__parent middle-menu-nav__parent-img col-lg-6 col-md-7 col-sm-12 col-xs-12"
                                      id="photoPlace">
                                     <div class="middle-menu-nav__img-container">
@@ -1005,11 +1501,12 @@
                                             <img class="category-item-img" src="images/1.png" alt="">
                                             <div class="category-item-footer">
                                                 <ul class="category-item-footer-list">
-                                                    <li><img src="images/money.png" alt=""><span class="price">90<sup>00</sup></span></li>
+                                                    <li><img src="images/money.png" alt=""><span
+                                                            class="price">90<sup>00</sup></span></li>
                                                     <li><img src="images/list.png" alt=""></li>
                                                     <li><img src="images/ok.png" alt=""></li>
                                                     <li><img src="images/delivery.png" alt=""></li>
-                                                    <li><img src="images/cart.png" alt=""></li>
+                                                    <li><img src="images/cart_v.png" alt=""></li>
                                                 </ul>
                                             </div>
                                         </a>
@@ -1024,11 +1521,12 @@
                                             <img class="category-item-img" src="images/1.png" alt="">
                                             <div class="category-item-footer">
                                                 <ul class="category-item-footer-list">
-                                                    <li><img src="images/money.png" alt=""><span class="price">90<sup>00</sup></span></li>
+                                                    <li><img src="images/money.png" alt=""><span
+                                                            class="price">90<sup>00</sup></span></li>
                                                     <li><img src="images/list.png" alt=""></li>
                                                     <li><img src="images/ok.png" alt=""></li>
                                                     <li><img src="images/delivery.png" alt=""></li>
-                                                    <li><img src="images/cart.png" alt=""></li>
+                                                    <li><img src="images/cart_v.png" alt=""></li>
                                                 </ul>
                                             </div>
                                         </a>
@@ -1043,11 +1541,12 @@
                                             <img class="category-item-img" src="images/1.png" alt="">
                                             <div class="category-item-footer">
                                                 <ul class="category-item-footer-list">
-                                                    <li><img src="images/money.png" alt=""><span class="price">90<sup>00</sup></span></li>
+                                                    <li><img src="images/money.png" alt=""><span
+                                                            class="price">90<sup>00</sup></span></li>
                                                     <li><img src="images/list.png" alt=""></li>
                                                     <li><img src="images/ok.png" alt=""></li>
                                                     <li><img src="images/delivery.png" alt=""></li>
-                                                    <li><img src="images/cart.png" alt=""></li>
+                                                    <li><img src="images/cart_v.png" alt=""></li>
                                                 </ul>
                                             </div>
                                         </a>
@@ -1062,11 +1561,12 @@
                                             <img class="category-item-img" src="images/1.png" alt="">
                                             <div class="category-item-footer">
                                                 <ul class="category-item-footer-list">
-                                                    <li><img src="images/money.png" alt=""><span class="price">90<sup>00</sup></span></li>
+                                                    <li><img src="images/money.png" alt=""><span
+                                                            class="price">90<sup>00</sup></span></li>
                                                     <li><img src="images/list.png" alt=""></li>
                                                     <li><img src="images/ok.png" alt=""></li>
                                                     <li><img src="images/delivery.png" alt=""></li>
-                                                    <li><img src="images/cart.png" alt=""></li>
+                                                    <li><img src="images/cart_v.png" alt=""></li>
                                                 </ul>
                                             </div>
                                         </a>
@@ -1080,7 +1580,8 @@
             <footer class="footer">
                 <div class="container">
                     <div class="row">
-                        <div class="footer-copy col-lg-6 col-md-3 col-sm-3 col-xs-12">Copyright &copy; 2017 Genius Automotive
+                        <div class="footer-copy col-lg-6 col-md-3 col-sm-3 col-xs-12">Copyright &copy; 2017 Genius
+                            Automotive
                         </div>
                         <div class="footer-places col-lg-6 col-md-9 col-sm-9 col-xs-12">
                             <div class="footer-tabels">
@@ -1106,9 +1607,9 @@
     </tr>
     </tbody>
 </table>
-<script src="https://code.jquery.com/jquery-3.2.1.min.js"
+<!--<script src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>-->
 <script src="js/app.min.js"></script>
 </body>
 </html>

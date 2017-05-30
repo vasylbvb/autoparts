@@ -282,3 +282,31 @@
     }
   }
 }
+
+//Mobile Slider
+#slideshow-inner > ul > li[id^="slide"] > .middle-menu-nav__parent {
+  padding: 0;
+  margin: 0;
+  height: inherit;
+  &>.middle-menu-nav {
+    box-shadow: none;
+    &>.middle-menu-nav__inner-text>.middle-menu-nav__inner-text-list>.middle-menu-nav__inner-text-item:before {
+      display: none;
+    }
+    &>.middle-menu-nav__btn-container {
+      bottom: 37px;
+      right: 25px;
+    }
+  }
+}
+//Big Mobile Slider
+.slider-signature {
+  position:absolute;
+  top:60px;
+  left:160px;
+  color:#fff;font-size:54px;
+  font-weight:700;
+}
+.slider-signature > span {
+  color:#ffd247
+}

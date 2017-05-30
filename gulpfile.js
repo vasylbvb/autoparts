@@ -23,7 +23,7 @@ gulp.task("fonts", function () {
 });
 
 gulp.task("css", function(){
-    return gulp.src("src/css/main.less")
+    return gulp.src("src/css/app.less")
         .pipe(sourcemaps.init())
         .pipe(less())
         .pipe(autoprefixer({
