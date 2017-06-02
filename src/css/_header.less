@@ -137,6 +137,16 @@
   border: 0;
   border-radius: 0;
   font-size: 24px;
+  &:before {
+    display: inline-block;
+    content: '';
+    width: 0;
+    height: inherit;
+    vertical-align: middle;
+  }
+  & > span {
+    vertical-align: middle;
+  }
 }
 
 .cart-box {
@@ -308,13 +318,19 @@
   }
 }
 .main-nav__item-expanded-link {
+  display: inline-block;
+  height: inherit;
+  width: 98%;
   & > .main-nav__item-expanded-link-img {
     display: inline-block;
     padding-left: 5px;
+    height: 100%;
+    width: auto;
   }
   & > .main-nav__item-expanded-link-text {
     display: inline-block;
     vertical-align: middle;
+    padding-left: 5px;
     max-width: 55%;
     font-family: "Panton";
     font-size: 14px;
